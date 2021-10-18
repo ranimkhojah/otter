@@ -1,0 +1,112 @@
+[
+    {
+        "current_plan_item": "findout(?goal(perform(instruct_sourdough_starter)))",
+        "semantic_expression": "answer(yes)",
+        "asr_hints": [
+            "yes"
+        ],
+        "visual_information": [
+            {
+                "attribute": "name",
+                "type": "text/plain",
+                "value": "Yes"
+            },
+            {
+                "attribute": "image",
+                "type": "image/jpeg",
+                "value": "https://icon-library.com/images/green-tick-icon/green-tick-icon-27.jpg"
+            }
+        ]
+    },
+    {
+        "current_plan_item": "findout(?goal(perform(instruct_sourdough_starter)))",
+        "semantic_expression": "answer(no)",
+        "asr_hints": [
+            "no"
+        ],
+        "visual_information": [
+            {
+                "attribute": "name",
+                "type": "text/plain",
+                "value": "No"
+            },
+            {
+                "attribute": "image",
+                "type": "image/jpeg",
+                "value": "https://icon-library.com/images/red-cross-icon-png/red-cross-icon-png-13.jpg"
+            }
+        ]
+    },
+    {
+        "current_plan_item": "findout(?goal(perform(instruct_pappabrod)))",
+        "semantic_expression": "answer(yes)",
+        "asr_hints": [
+            "yes"
+        ],
+        "visual_information": [
+            {
+                "attribute": "name",
+                "type": "text/plain",
+                "value": "Yes"
+            },
+            {
+                "attribute": "image",
+                "type": "image/jpeg",
+                "value": "https://icon-library.com/images/green-tick-icon/green-tick-icon-27.jpg"
+            }
+        ]
+    },
+    {
+        "current_plan_item": "findout(?goal(perform(instruct_pappabrod)))",
+        "semantic_expression": "answer(no)",
+        "asr_hints": [
+            "no"
+        ],
+        "visual_information": [
+            {
+                "attribute": "name",
+                "type": "text/plain",
+                "value": "No"
+            },
+            {
+                "attribute": "image",
+                "type": "image/jpeg",
+                "value": "https://icon-library.com/images/red-cross-icon-png/red-cross-icon-png-13.jpg"
+            }
+        ]
+    },
+    {
+        "current_plan_item": "findout(?set([goal(perform(search_for_recipe)), goal(perform(instruct_sourdough_starter))]))",
+        "semantic_expression": "request(search_for_recipe)",
+        "asr_hints": [],
+        "visual_information": [
+            {
+                "attribute": "name",
+                "type": "text/plain",
+                "value": "Search for a recipe"
+            },
+            {
+                "attribute": "image",
+                "type": "image/jpeg",
+                "value": "https://diycandy.com/wp-content/uploads/2019/06/cold-broccoli-salad.jpg"
+            }
+        ]
+    },
+    {
+        "current_plan_item": "findout(?set([goal(perform(search_for_recipe)), goal(perform(instruct_sourdough_starter))]))",
+        "semantic_expression": "request(instruct_sourdough_starter)",
+        "asr_hints": [],
+        "visual_information": [
+            {
+                "attribute": "name",
+                "type": "text/plain",
+                "value": "Sourdough starter"
+            },
+            {
+                "attribute": "image",
+                "type": "image/jpeg",
+                "value": "https://www.offthegridnews.com/wp-content/uploads/2018/06/AdobeStock_197947820.jpeg"
+            }
+        ]
+    }
+]

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grammar>
+
+  <action name="top">
+    <one-of>
+      <item>main menu</item>
+      <item>top</item>
+      <item>beginning</item>
+      <item>cancel</item>
+      <item>forget it</item>
+      <item>never mind</item>
+      <item>abort</item>
+    </one-of>
+  </action>
+
+  <action name="up">
+    <one-of>
+      <item>up</item>
+      <item>back</item>
+      <item>go back</item>
+    </one-of>
+  </action>
+
+  <question speaker="user" predicate="movie" type="wh_question">
+    <one-of>
+      <item>Watch a movie about <slot predicate="keyword_to_search"/></item>
+      <item>Watch a movie</item>
+      <item>I want to watch a movie</item>
+      <item>Recommend me a movie to watch</item>
+      <item>Watch a <slot predicate="keyword_to_search"/> movie</item>
+      <item>I want to watch a movie about <slot predicate="keyword_to_search"/></item>
+      <item>I want to watch a <slot predicate="keyword_to_search"/> movie</item>
+      <item>I want to watch an <slot predicate="keyword_to_search"/> movie</item>
+    </one-of>
+  </question>
+  
+  <question speaker="user" predicate="plot" type="wh_question">
+    <one-of>
+      <item>Tell me the plot of a movie</item>
+      <item>Tell me about <slot predicate="title_to_search"/></item>
+      <item>Tell me about a movie</item>
+      <item>Talk more about <slot predicate="title_to_search"/> movie</item>
+    </one-of>
+  </question>
+
+  <question speaker="user" predicate="similar_movie" type="wh_question">
+    <one-of>
+      <item>Show me a similar movie</item>
+      <item>Show me a similar movie to <slot predicate="title_to_search"/></item>
+      <item>Show me a movie similar to <slot predicate="title_to_search"/></item>
+      <item>Show me something similar to <slot predicate="title_to_search"/></item>
+      <item>I want to watch a movie similar to <slot predicate="title_to_search"/></item>
+    </one-of>
+  </question>
+
+
+  <question speaker="system" predicate="keyword_to_search" type="wh_question">
+    what kind of movie
+  </question>
+
+  <question speaker="system" predicate="title_to_search" type="wh_question">
+    what is the movie title
+  </question>
+
+  
+  <answer speaker="system" predicate="movie">The best movie to watch is <slot predicate="movie"/></answer>
+  <answer speaker="system" predicate="plot">The movie talks about <slot predicate="plot"/></answer>
+  <answer speaker="system" predicate="similar_movie">A similar movie is <slot predicate="similar_movie"/></answer>
+
+  <question type="wh_question" speaker="all" predicate="movie">movie</question>
+  <question type="wh_question" speaker="all" predicate="plot">plot</question>
+  <question type="wh_question" speaker="all" predicate="similar_movie">similar movie</question>
+
+  <individual name="title_blackwidow">black widow</individual>
+  <individual name="title_freeguy">free guy</individual>
+  <individual name="title_lotr">the lord of the rings</individual>
+  <individual name="title_despicableme">despicable me</individual>
+  <individual name="title_venom">venom</individual>
+
+  <individual name="keyword_rescue">rescue</individual>
+  <individual name="keyword_hero">hero</individual>
+  <individual name="keyword_art">art</individual>
+  <individual name="keyword_artist">artist</individual>
+  <individual name="keyword_car">car</individual>
+  <individual name="keyword_bollywood">bollywood</individual>
+  <individual name="keyword_friendship">friendship</individual>
+  <individual name="keyword_love">love</individual>
+  <individual name="keyword_novel">based on novel</individual>
+  <individual name="keyword_story">based on short story</individual>
+  <individual name="keyword_anime">anime</individual>
+  <individual name="keyword_superhero">superhero</individual>
+  <individual name="keyword_murder">murder</individual>
+  <individual name="keyword_kungfu">kung fu</individual>
+
+</grammar>

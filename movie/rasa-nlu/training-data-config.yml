@@ -1,0 +1,505 @@
+language: "en"
+
+pipeline:
+  - name: WhitespaceTokenizer
+    case_sensitive: False
+  - name: LanguageModelFeaturizer
+    model_name: "bert"
+    model_weights: "bert-base-uncased"
+    cache_dir: lfs
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: "char_wb"
+    min_ngram: 1
+    max_ngram: 4
+  - name: DIETClassifier
+    epochs: 100
+#  - name: DucklingEntityExtractor
+#    url: "http://duckling:8000"
+#    dimensions: []  # Add dimensions if the DDD has built-in the sorts integer or datetime e.g. ["number", "time"]
+  - name: RegexEntityExtractor
+    # text will be processed with case insensitive as default
+    case_sensitive: False
+    # use lookup tables to extract entities
+    use_lookup_tables: True
+    # use regexes to extract entities
+    use_regexes: True
+    # use match word boundaries for lookup table
+    # needs to be "False" for languages like Chinese
+    "use_word_boundaries": True
+  - name: EntitySynonymMapper
+version: "2.0"
+
+nlu:
+- intent: movie:question::movie
+  examples: |
+    - Watch a movie about [art](movie.sort.keyword)
+    - Watch a movie about [artist](movie.sort.keyword)
+    - Watch a movie about [based on novel](movie.sort.keyword)
+    - Watch a movie about [based on short story](movie.sort.keyword)
+    - Watch a movie about [bollywood](movie.sort.keyword)
+    - Watch a movie about [car](movie.sort.keyword)
+    - Watch a movie about [hero](movie.sort.keyword)
+    - Watch a movie about [kung fu](movie.sort.keyword)
+    - Watch a movie about [murder](movie.sort.keyword)
+    - Watch a movie about [rescue](movie.sort.keyword)
+    - Watch a movie
+    - I want to watch a movie
+    - Recommend me a movie to watch
+    - Watch a [art](movie.sort.keyword) movie
+    - Watch a [artist](movie.sort.keyword) movie
+    - Watch a [based on novel](movie.sort.keyword) movie
+    - Watch a [bollywood](movie.sort.keyword) movie
+    - Watch a [car](movie.sort.keyword) movie
+    - Watch a [friendship](movie.sort.keyword) movie
+    - Watch a [hero](movie.sort.keyword) movie
+    - Watch a [kung fu](movie.sort.keyword) movie
+    - Watch a [rescue](movie.sort.keyword) movie
+    - Watch a [superhero](movie.sort.keyword) movie
+    - I want to watch a movie about [anime](movie.sort.keyword)
+    - I want to watch a movie about [artist](movie.sort.keyword)
+    - I want to watch a movie about [based on novel](movie.sort.keyword)
+    - I want to watch a movie about [based on short story](movie.sort.keyword)
+    - I want to watch a movie about [car](movie.sort.keyword)
+    - I want to watch a movie about [friendship](movie.sort.keyword)
+    - I want to watch a movie about [hero](movie.sort.keyword)
+    - I want to watch a movie about [love](movie.sort.keyword)
+    - I want to watch a movie about [murder](movie.sort.keyword)
+    - I want to watch a movie about [superhero](movie.sort.keyword)
+    - I want to watch a [anime](movie.sort.keyword) movie
+    - I want to watch a [artist](movie.sort.keyword) movie
+    - I want to watch a [bollywood](movie.sort.keyword) movie
+    - I want to watch a [car](movie.sort.keyword) movie
+    - I want to watch a [friendship](movie.sort.keyword) movie
+    - I want to watch a [hero](movie.sort.keyword) movie
+    - I want to watch a [kung fu](movie.sort.keyword) movie
+    - I want to watch a [love](movie.sort.keyword) movie
+    - I want to watch a [murder](movie.sort.keyword) movie
+    - I want to watch a [superhero](movie.sort.keyword) movie
+    - I want to watch an [art](movie.sort.keyword) movie
+    - I want to watch an [artist](movie.sort.keyword) movie
+    - I want to watch an [based on short story](movie.sort.keyword) movie
+    - I want to watch an [car](movie.sort.keyword) movie
+    - I want to watch an [hero](movie.sort.keyword) movie
+    - I want to watch an [kung fu](movie.sort.keyword) movie
+    - I want to watch an [love](movie.sort.keyword) movie
+    - I want to watch an [murder](movie.sort.keyword) movie
+    - I want to watch an [rescue](movie.sort.keyword) movie
+    - I want to watch an [superhero](movie.sort.keyword) movie
+
+- intent: movie:question::plot
+  examples: |
+    - Tell me the plot of a movie
+    - Tell me about [black widow](movie.sort.title)
+    - Tell me about [despicable me](movie.sort.title)
+    - Tell me about [free guy](movie.sort.title)
+    - Tell me about [the lord of the rings](movie.sort.title)
+    - Tell me about [venom](movie.sort.title)
+    - Tell me about a movie
+    - Talk more about [black widow](movie.sort.title) movie
+    - Talk more about [despicable me](movie.sort.title) movie
+    - Talk more about [free guy](movie.sort.title) movie
+    - Talk more about [the lord of the rings](movie.sort.title) movie
+    - Talk more about [venom](movie.sort.title) movie
+
+- intent: movie:question::similar_movie
+  examples: |
+    - Show me a similar movie
+    - Show me a similar movie to [black widow](movie.sort.title)
+    - Show me a similar movie to [despicable me](movie.sort.title)
+    - Show me a similar movie to [free guy](movie.sort.title)
+    - Show me a similar movie to [the lord of the rings](movie.sort.title)
+    - Show me a similar movie to [venom](movie.sort.title)
+    - Show me a movie similar to [black widow](movie.sort.title)
+    - Show me a movie similar to [despicable me](movie.sort.title)
+    - Show me a movie similar to [free guy](movie.sort.title)
+    - Show me a movie similar to [the lord of the rings](movie.sort.title)
+    - Show me a movie similar to [venom](movie.sort.title)
+    - Show me something similar to [black widow](movie.sort.title)
+    - Show me something similar to [despicable me](movie.sort.title)
+    - Show me something similar to [free guy](movie.sort.title)
+    - Show me something similar to [the lord of the rings](movie.sort.title)
+    - Show me something similar to [venom](movie.sort.title)
+    - I want to watch a movie similar to [black widow](movie.sort.title)
+    - I want to watch a movie similar to [despicable me](movie.sort.title)
+    - I want to watch a movie similar to [free guy](movie.sort.title)
+    - I want to watch a movie similar to [the lord of the rings](movie.sort.title)
+    - I want to watch a movie similar to [venom](movie.sort.title)
+
+- intent: movie:answer
+  examples: |
+    - [rescue](movie.sort.keyword)
+    - [hero](movie.sort.keyword)
+    - [art](movie.sort.keyword)
+    - [artist](movie.sort.keyword)
+    - [car](movie.sort.keyword)
+    - [bollywood](movie.sort.keyword)
+    - [friendship](movie.sort.keyword)
+    - [love](movie.sort.keyword)
+    - [based on novel](movie.sort.keyword)
+    - [based on short story](movie.sort.keyword)
+    - [anime](movie.sort.keyword)
+    - [superhero](movie.sort.keyword)
+    - [murder](movie.sort.keyword)
+    - [kung fu](movie.sort.keyword)
+    - [single](movie.sort.string)
+    - [double word](movie.sort.string)
+    - [three in one](movie.sort.string)
+    - [hey make it four](movie.sort.string)
+    - [the more the merrier five](movie.sort.string)
+    - [calm down and count to six](movie.sort.string)
+    - [bring them through to the jolly seven](movie.sort.string)
+    - [noone counts toes like an eight toed guy](movie.sort.string)
+    - [it matters to make sense for nine of us](movie.sort.string)
+    - [would you bring ten or none to a desert island](movie.sort.string)
+    - [black widow](movie.sort.title)
+    - [free guy](movie.sort.title)
+    - [the lord of the rings](movie.sort.title)
+    - [despicable me](movie.sort.title)
+    - [venom](movie.sort.title)
+    - yes [rescue](movie.sort.keyword)
+    - yes [anime](movie.sort.keyword)
+    - yes [bring them through to the jolly seven](movie.sort.string)
+    - no [hero](movie.sort.keyword)
+    - no [superhero](movie.sort.keyword)
+    - no [noone counts toes like an eight toed guy](movie.sort.string)
+
+- intent: movie:answer_negation
+  examples: |
+    - not [rescue](movie.sort.keyword)
+    - not [hero](movie.sort.keyword)
+    - not [art](movie.sort.keyword)
+    - not [artist](movie.sort.keyword)
+    - not [car](movie.sort.keyword)
+    - not [bollywood](movie.sort.keyword)
+    - not [friendship](movie.sort.keyword)
+    - not [love](movie.sort.keyword)
+    - not [based on novel](movie.sort.keyword)
+    - not [based on short story](movie.sort.keyword)
+    - not [anime](movie.sort.keyword)
+    - not [superhero](movie.sort.keyword)
+    - not [murder](movie.sort.keyword)
+    - not [kung fu](movie.sort.keyword)
+    - not [black widow](movie.sort.title)
+    - not [free guy](movie.sort.title)
+    - not [the lord of the rings](movie.sort.title)
+    - not [despicable me](movie.sort.title)
+    - not [venom](movie.sort.title)
+
+- intent: NEGATIVE
+  examples: |
+    - aboard
+    - about
+    - above
+    - across
+    - after
+    - against
+    - along
+    - among
+    - as
+    - at
+    - on
+    - atop
+    - before
+    - behind
+    - below
+    - beneath
+    - beside
+    - between
+    - beyond
+    - but
+    - by
+    - come
+    - down
+    - during
+    - except
+    - for
+    - from
+    - in
+    - inside
+    - into
+    - less
+    - like
+    - near
+    - of
+    - off
+    - on
+    - onto
+    - opposite
+    - out
+    - outside
+    - over
+    - past
+    - save
+    - short
+    - since
+    - than
+    - then
+    - through
+    - throughout
+    - to
+    - toward
+    - under
+    - underneath
+    - unlike
+    - until
+    - up
+    - upon
+    - with
+    - within
+    - without
+    - worth
+    - is
+    - it
+    - the
+    - a
+    - am
+    - are
+    - them
+    - this
+    - that
+    - I
+    - you
+    - he
+    - she
+    - they
+    - them
+    - his
+    - her
+    - my
+    - mine
+    - their
+    - your
+    - us
+    - our
+    - how
+    - how's
+    - how is
+    - how's the
+    - how is the
+    - when
+    - when's
+    - when is
+    - when is the
+    - when's the
+    - what
+    - what is
+    - what's
+    - what's the
+    - what is the
+    - why
+    - why is
+    - why's
+    - why is the
+    - why's the
+    - do
+    - make
+    - tell
+    - start
+    - stop
+    - enable
+    - disable
+    - raise
+    - lower
+    - decrease
+    - increase
+    - act
+    - determine
+    - say
+    - ask
+    - go
+    - shoot
+    - wait
+    - hang on
+    - ok
+    - show
+    - help
+
+- intent: answer:yes
+  examples: |
+    - yes
+    - yeah
+    - yep
+    - sure
+    - ok
+    - of course
+    - very well
+    - fine
+    - right
+    - excellent
+    - okay
+    - perfect
+    - I think so
+
+- intent: answer:no
+  examples: |
+    - no
+    - nope
+    - no thanks
+    - no thank you
+    - negative
+    - don't want to
+    - don't
+    - do not
+    - please don't
+
+- intent: request:top
+  examples: |
+    - forget it
+    - never mind
+    - get me out of here
+    - start over
+    - beginning
+    - never mind that
+    - restart
+
+- intent: request:up
+  examples: |
+    - go back
+    - back
+    - previous
+    - back to the previous
+    - go to the previous
+    - go back to the previous one
+
+- intent: request:how
+  examples: |
+    - how do I do that
+    - how
+    - can you tell me how to do that
+    - I don't know how should I do that
+    - how can I do that
+
+- intent: report:done
+  examples: |
+    - I'm done
+    - done
+    - ready
+    - it's ready
+    - I'm ready
+    - completed
+    - check
+    - I have finished
+    - finished
+    - done and done
+    - it's done now
+    - okay next
+    - next
+    - next instruction
+
+- intent: icm:per*neg
+  examples: |
+    - repeat
+    - repeat it
+    - repeat that
+    - pardon
+    - sorry
+    - can you repeat that
+    - excuse me
+    - what was that
+    - what did you say
+    - come again
+
+- intent: icm:acc*neg:issue
+  examples: |
+    - I don't know
+    - I don't know that
+    - it doesn't matter
+
+- intent: thanks
+  examples: |
+    - thank you
+    - thank you very much
+    - thanks
+    - big thanks
+    - thanks a lot
+
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - good day
+    - what's up
+    - good evening
+    - good morning
+    - hey
+
+- synonym: movie:keyword_rescue
+  examples: |
+    - rescue
+
+- synonym: movie:keyword_hero
+  examples: |
+    - hero
+
+- synonym: movie:keyword_art
+  examples: |
+    - art
+
+- synonym: movie:keyword_artist
+  examples: |
+    - artist
+
+- synonym: movie:keyword_car
+  examples: |
+    - car
+
+- synonym: movie:keyword_bollywood
+  examples: |
+    - bollywood
+
+- synonym: movie:keyword_friendship
+  examples: |
+    - friendship
+
+- synonym: movie:keyword_love
+  examples: |
+    - love
+
+- synonym: movie:keyword_novel
+  examples: |
+    - based on novel
+
+- synonym: movie:keyword_story
+  examples: |
+    - based on short story
+
+- synonym: movie:keyword_anime
+  examples: |
+    - anime
+
+- synonym: movie:keyword_superhero
+  examples: |
+    - superhero
+
+- synonym: movie:keyword_murder
+  examples: |
+    - murder
+
+- synonym: movie:keyword_kungfu
+  examples: |
+    - kung fu
+
+- synonym: movie:title_blackwidow
+  examples: |
+    - black widow
+
+- synonym: movie:title_freeguy
+  examples: |
+    - free guy
+
+- synonym: movie:title_lotr
+  examples: |
+    - the lord of the rings
+
+- synonym: movie:title_despicableme
+  examples: |
+    - despicable me
+
+- synonym: movie:title_venom
+  examples: |
+    - venom
+
+

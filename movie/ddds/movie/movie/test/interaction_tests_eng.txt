@@ -1,0 +1,36 @@
+--- main menu
+S> What would you like to do?
+U> Watch a movie
+S> What kind of movie?
+U> art
+S> The best movie to watch is *
+--- movie (one-shot)
+S> What would you like to do?
+U> Watch a rescue movie
+S> The best movie to watch is *
+--- movie (step-by-step)
+S> What would you like to do?
+U> Recommend me a movie to watch
+S> What kind of movie?
+U> hero
+S> The best movie to watch is *
+--- plot (one-shot)
+S> What would you like to do?
+U> Tell me about despicable me
+S> The movie talks about *
+--- plot (step-by-step)
+S> What would you like to do?
+U> Tell me the plot of a movie
+S> What is the movie title?
+U> Despicable Me
+S> The movie talks about *
+--- similar (one-shot)
+S> What would you like to do?
+U> Show me a similar movie to Black Widow
+S> A similar movie is *
+--- similar (step-by-step)
+S> What would you like to do?
+U> Show me a similar movie
+S> What is the movie title?
+U> Despicable Me
+S> A similar movie is *

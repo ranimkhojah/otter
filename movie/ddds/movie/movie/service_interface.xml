@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service_interface>
+
+    <query name="movie">
+        <parameters>
+            <parameter predicate="keyword_to_search" format="grammar_entry"/>
+        </parameters>
+        <target>
+            <http endpoint="http://http-service/movie"/>
+        </target>
+    </query>
+
+    <query name="plot">
+        <parameters>
+            <parameter predicate="title_to_search" format="grammar_entry"/>
+        </parameters>
+        <target>
+            <http endpoint="http://http-service/plot"/>
+        </target>
+    </query>
+
+    <query name="similar_movie">
+        <parameters>
+            <parameter predicate="title_to_search" format="grammar_entry"/>
+        </parameters>
+        <target>
+            <http endpoint="http://http-service/similar_movie"/>
+        </target>
+    </query>
+
+</service_interface>

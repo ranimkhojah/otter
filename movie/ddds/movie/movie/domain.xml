@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<domain name="MovieDomain" is_super_domain="true">
+  <goal type="perform" action="top">
+    <plan>
+      <forget_all/>
+      <findout type="goal"/>
+      <findout type="alt_question">
+        <alt>
+          <resolve type="wh_question" predicate="movie"/>
+        </alt>
+        <alt>
+          <resolve type="wh_question" predicate="plot"/>
+        </alt>
+        <alt>
+          <resolve type="wh_question" predicate="similar_movie"/>
+        </alt>
+      </findout>
+    </plan>
+  </goal>
+
+  <goal type="resolve" question_type="wh_question" predicate="movie">
+    <plan>
+      <findout type="wh_question" predicate="keyword_to_search"/>
+      <invoke_service_query predicate="movie" type="wh_question"/>
+    </plan>
+  </goal>
+
+  <goal type="resolve" question_type="wh_question" predicate="plot">
+    <plan>
+      <findout type="wh_question" predicate="title_to_search"/>
+      <invoke_service_query predicate="plot" type="wh_question"/>
+      <forget predicate="title_to_search"/> 
+    </plan>
+  </goal>
+
+  <goal type="resolve" question_type="wh_question" predicate="similar_movie">
+    <plan>
+      <findout type="wh_question" predicate="title_to_search"/>
+      <invoke_service_query predicate="similar_movie" type="wh_question"/>
+      <forget predicate="title_to_search"/> 
+    </plan>
+  </goal>
+
+</domain>

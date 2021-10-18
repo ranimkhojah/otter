@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ontology name="MovieOntology">
+
+    <sort name="title" dynamic="true"/>
+    <sort name="keyword" dynamic="true"/>
+
+    <predicate name="title_to_search" sort="title"/>
+    <predicate name="keyword_to_search" sort="keyword"/>
+    
+    <predicate name="movie" sort="string"/>
+    <predicate name="plot" sort="string"/>
+    <predicate name="similar_movie" sort="string"/>
+
+    <individual name="title_blackwidow" sort="title"/>
+    <individual name="title_freeguy" sort="title"/>
+    <individual name="title_lotr" sort="title"/>
+    <individual name="title_despicableme" sort="title"/>
+    <individual name="title_venom" sort="title"/>
+
+    <individual name="keyword_rescue" sort="keyword"/>
+    <individual name="keyword_hero" sort="keyword"/>
+    <individual name="keyword_art" sort="keyword"/>
+    <individual name="keyword_artist" sort="keyword"/>
+    <individual name="keyword_car" sort="keyword"/>
+    <individual name="keyword_bollywood" sort="keyword"/>
+    <individual name="keyword_friendship" sort="keyword"/>
+    <individual name="keyword_love" sort="keyword"/>
+    <individual name="keyword_novel" sort="keyword"/>
+    <individual name="keyword_story" sort="keyword"/>
+    <individual name="keyword_anime" sort="keyword"/>
+    <individual name="keyword_superhero" sort="keyword"/>
+    <individual name="keyword_murder" sort="keyword"/>
+    <individual name="keyword_kungfu" sort="keyword"/>
+
+</ontology>
