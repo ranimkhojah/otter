@@ -35,115 +35,181 @@ version: "2.0"
 nlu:
 - intent: movie:question::movie
   examples: |
-    - Watch a movie about [art](movie.sort.keyword)
-    - Watch a movie about [artist](movie.sort.keyword)
-    - Watch a movie about [based on novel](movie.sort.keyword)
-    - Watch a movie about [based on short story](movie.sort.keyword)
-    - Watch a movie about [bollywood](movie.sort.keyword)
-    - Watch a movie about [car](movie.sort.keyword)
-    - Watch a movie about [hero](movie.sort.keyword)
-    - Watch a movie about [kung fu](movie.sort.keyword)
-    - Watch a movie about [murder](movie.sort.keyword)
-    - Watch a movie about [rescue](movie.sort.keyword)
+    - Watch a movie about [action hero](movie.sort.keyword)
+    - Watch a movie about [anime](movie.sort.keyword)
+    - Watch a movie about [b movie](movie.sort.keyword)
+    - Watch a movie about [based on comic book](movie.sort.keyword)
+    - Watch a movie about [based on play](movie.sort.keyword)
+    - Watch a movie about [coming of age](movie.sort.keyword)
+    - Watch a movie about [macguffin](movie.sort.keyword)
+    - Watch a movie about [one against many](movie.sort.keyword)
+    - Watch a movie about [robot](movie.sort.keyword)
+    - Watch a movie about [wilhelm scream](movie.sort.keyword)
     - Watch a movie
     - I want to watch a movie
     - Recommend me a movie to watch
-    - Watch a [art](movie.sort.keyword) movie
-    - Watch a [artist](movie.sort.keyword) movie
-    - Watch a [based on novel](movie.sort.keyword) movie
-    - Watch a [bollywood](movie.sort.keyword) movie
-    - Watch a [car](movie.sort.keyword) movie
-    - Watch a [friendship](movie.sort.keyword) movie
-    - Watch a [hero](movie.sort.keyword) movie
-    - Watch a [kung fu](movie.sort.keyword) movie
-    - Watch a [rescue](movie.sort.keyword) movie
-    - Watch a [superhero](movie.sort.keyword) movie
-    - I want to watch a movie about [anime](movie.sort.keyword)
-    - I want to watch a movie about [artist](movie.sort.keyword)
-    - I want to watch a movie about [based on novel](movie.sort.keyword)
-    - I want to watch a movie about [based on short story](movie.sort.keyword)
-    - I want to watch a movie about [car](movie.sort.keyword)
-    - I want to watch a movie about [friendship](movie.sort.keyword)
-    - I want to watch a movie about [hero](movie.sort.keyword)
-    - I want to watch a movie about [love](movie.sort.keyword)
-    - I want to watch a movie about [murder](movie.sort.keyword)
-    - I want to watch a movie about [superhero](movie.sort.keyword)
-    - I want to watch a [anime](movie.sort.keyword) movie
-    - I want to watch a [artist](movie.sort.keyword) movie
-    - I want to watch a [bollywood](movie.sort.keyword) movie
-    - I want to watch a [car](movie.sort.keyword) movie
-    - I want to watch a [friendship](movie.sort.keyword) movie
-    - I want to watch a [hero](movie.sort.keyword) movie
-    - I want to watch a [kung fu](movie.sort.keyword) movie
-    - I want to watch a [love](movie.sort.keyword) movie
-    - I want to watch a [murder](movie.sort.keyword) movie
-    - I want to watch a [superhero](movie.sort.keyword) movie
-    - I want to watch an [art](movie.sort.keyword) movie
-    - I want to watch an [artist](movie.sort.keyword) movie
-    - I want to watch an [based on short story](movie.sort.keyword) movie
-    - I want to watch an [car](movie.sort.keyword) movie
-    - I want to watch an [hero](movie.sort.keyword) movie
-    - I want to watch an [kung fu](movie.sort.keyword) movie
-    - I want to watch an [love](movie.sort.keyword) movie
+    - Watch a [anime](movie.sort.keyword) movie
+    - Watch a [biker](movie.sort.keyword) movie
+    - Watch a [famous opening theme](movie.sort.keyword) movie
+    - Watch a [futuristic](movie.sort.keyword) movie
+    - Watch a [mother daughter relationship](movie.sort.keyword) movie
+    - Watch a [nonlinear timeline](movie.sort.keyword) movie
+    - Watch a [plot twist](movie.sort.keyword) movie
+    - Watch a [redemption](movie.sort.keyword) movie
+    - Watch a [self sacrifice](movie.sort.keyword) movie
+    - Watch a [slasher](movie.sort.keyword) movie
+    - I want to watch a movie about [conspiracy](movie.sort.keyword)
+    - I want to watch a movie about [criminal mastermind](movie.sort.keyword)
+    - I want to watch a movie about [monster](movie.sort.keyword)
+    - I want to watch a movie about [one against many](movie.sort.keyword)
+    - I want to watch a movie about [organized crime](movie.sort.keyword)
+    - I want to watch a movie about [parody](movie.sort.keyword)
+    - I want to watch a movie about [spirituality](movie.sort.keyword)
+    - I want to watch a movie about [sword and sandal](movie.sort.keyword)
+    - I want to watch a movie about [virtual reality](movie.sort.keyword)
+    - I want to watch a movie about [wuxia](movie.sort.keyword)
+    - I want to watch a [action hero](movie.sort.keyword) movie
+    - I want to watch a [b movie](movie.sort.keyword) movie
+    - I want to watch a [epic](movie.sort.keyword) movie
+    - I want to watch a [father daughter relationship](movie.sort.keyword) movie
+    - I want to watch a [fictional biography](movie.sort.keyword) movie
+    - I want to watch a [multiple time frames](movie.sort.keyword) movie
+    - I want to watch a [robot](movie.sort.keyword) movie
+    - I want to watch a [spaghetti western](movie.sort.keyword) movie
+    - I want to watch a [swashbuckler](movie.sort.keyword) movie
+    - I want to watch a [zombie](movie.sort.keyword) movie
+    - I want to watch an [bollywood](movie.sort.keyword) movie
+    - I want to watch an [car chase](movie.sort.keyword) movie
+    - I want to watch an [famous opening theme](movie.sort.keyword) movie
+    - I want to watch an [multiple endings](movie.sort.keyword) movie
     - I want to watch an [murder](movie.sort.keyword) movie
-    - I want to watch an [rescue](movie.sort.keyword) movie
-    - I want to watch an [superhero](movie.sort.keyword) movie
+    - I want to watch an [post-apocalypse](movie.sort.keyword) movie
+    - I want to watch an [serial killer](movie.sort.keyword) movie
+    - I want to watch an [slasher](movie.sort.keyword) movie
+    - I want to watch an [spaghetti western](movie.sort.keyword) movie
+    - I want to watch an [virtual reality](movie.sort.keyword) movie
 
-- intent: movie:question::plot
+- intent: movie:question::info
   examples: |
-    - Tell me the plot of a movie
-    - Tell me about [black widow](movie.sort.title)
-    - Tell me about [despicable me](movie.sort.title)
-    - Tell me about [free guy](movie.sort.title)
-    - Tell me about [the lord of the rings](movie.sort.title)
-    - Tell me about [venom](movie.sort.title)
     - Tell me about a movie
-    - Talk more about [black widow](movie.sort.title) movie
-    - Talk more about [despicable me](movie.sort.title) movie
-    - Talk more about [free guy](movie.sort.title) movie
-    - Talk more about [the lord of the rings](movie.sort.title) movie
-    - Talk more about [venom](movie.sort.title) movie
+    - Know more information about a movie
+    - Know more info about a movie
+    - Know more info about [12 Angry Men](movie.sort.title)
+    - Know more info about [Cruella](movie.sort.title)
+    - Know more info about [Dara of Jasenovac](movie.sort.title)
+    - Know more info about [Fantastic Beasts: The Crimes of Grindelwald](movie.sort.title)
+    - Know more info about [Ghost](movie.sort.title)
+    - Know more info about [Harakiri](movie.sort.title)
+    - Know more info about [Princess Mononoke](movie.sort.title)
+    - Know more info about [The Addams Family 2](movie.sort.title)
+    - Know more info about [The Lord of the Rings: The Fellowship of the Ring](movie.sort.title)
+    - Know more info about [WALL·E](movie.sort.title)
+    - Tell me about [500 Days of Summer](movie.sort.title)
+    - Tell me about [Dead Poets Society](movie.sort.title)
+    - Tell me about [Earth Girls Are Easy](movie.sort.title)
+    - Tell me about [Harry Potter and the Order of the Phoenix](movie.sort.title)
+    - Tell me about [High and Low](movie.sort.title)
+    - Tell me about [How to Train Your Dragon](movie.sort.title)
+    - Tell me about [Seven](movie.sort.title)
+    - Tell me about [The Pianist](movie.sort.title)
+    - Tell me about [The Prestige](movie.sort.title)
+    - Tell me about [WALL·E](movie.sort.title)
+    - Show me some info about a movie
+    - Talk more about [Dangal](movie.sort.title)
+    - Talk more about [Demon Slayer the Movie: Mugen Train](movie.sort.title)
+    - Talk more about [Green Street](movie.sort.title)
+    - Talk more about [Heat](movie.sort.title)
+    - Talk more about [Into the Wild](movie.sort.title)
+    - Talk more about [Raatchasan](movie.sort.title)
+    - Talk more about [The Hot Chick](movie.sort.title)
+    - Talk more about [The Lord of the Rings: The Return of the King](movie.sort.title)
+    - Talk more about [Untouchable](movie.sort.title)
+    - Talk more about [Venom](movie.sort.title)
+    - Know more information about the [full cast](movie.sort.type) of a movie
+    - Know more information about the [genre](movie.sort.type) of a movie
+    - Know more information about the [plot](movie.sort.type) of a movie
+    - Know more information about the [rating](movie.sort.type) of a movie
+    - Know [full cast](movie.sort.type) of a movie
+    - Know [genre](movie.sort.type) of a movie
+    - Know [plot](movie.sort.type) of a movie
+    - Know [rating](movie.sort.type) of a movie
+    - Know more info about the [full cast](movie.sort.type) of [Harry Potter and the Chamber of Secrets](movie.sort.title)
+    - Know more info about the [genre](movie.sort.type) of [Inside Out](movie.sort.title)
+    - Know more info about the [plot](movie.sort.type) of [The Father](movie.sort.title)
+    - Know more info about the [rating](movie.sort.type) of [Earth Girls Are Easy](movie.sort.title)
+    - What is the [full cast](movie.sort.type) of [Stardust](movie.sort.title)
+    - What is the [genre](movie.sort.type) of [Iron Man](movie.sort.title)
+    - What is the [plot](movie.sort.type) of [Untouchable](movie.sort.title)
+    - What is the [rating](movie.sort.type) of [Whiplash](movie.sort.title)
+    - Tell me about the [full cast](movie.sort.type) of [The Usual Suspects](movie.sort.title)
+    - Tell me about the [genre](movie.sort.type) of [Psycho](movie.sort.title)
+    - Tell me about the [plot](movie.sort.type) of [Interstellar](movie.sort.title)
+    - Tell me about the [rating](movie.sort.type) of [Harry Potter and the Half-Blood Prince](movie.sort.title)
 
 - intent: movie:question::similar_movie
   examples: |
     - Show me a similar movie
-    - Show me a similar movie to [black widow](movie.sort.title)
-    - Show me a similar movie to [despicable me](movie.sort.title)
-    - Show me a similar movie to [free guy](movie.sort.title)
-    - Show me a similar movie to [the lord of the rings](movie.sort.title)
-    - Show me a similar movie to [venom](movie.sort.title)
-    - Show me a movie similar to [black widow](movie.sort.title)
-    - Show me a movie similar to [despicable me](movie.sort.title)
-    - Show me a movie similar to [free guy](movie.sort.title)
-    - Show me a movie similar to [the lord of the rings](movie.sort.title)
-    - Show me a movie similar to [venom](movie.sort.title)
-    - Show me something similar to [black widow](movie.sort.title)
-    - Show me something similar to [despicable me](movie.sort.title)
-    - Show me something similar to [free guy](movie.sort.title)
-    - Show me something similar to [the lord of the rings](movie.sort.title)
-    - Show me something similar to [venom](movie.sort.title)
-    - I want to watch a movie similar to [black widow](movie.sort.title)
-    - I want to watch a movie similar to [despicable me](movie.sort.title)
-    - I want to watch a movie similar to [free guy](movie.sort.title)
-    - I want to watch a movie similar to [the lord of the rings](movie.sort.title)
-    - I want to watch a movie similar to [venom](movie.sort.title)
+    - Know movie based on a similar movie
+    - Show movie based on a similar one
+    - Show me a similar movie to [Back to the Future](movie.sort.title)
+    - Show me a similar movie to [Dead Poets Society](movie.sort.title)
+    - Show me a similar movie to [Harry Potter and the Prisoner of Azkaban](movie.sort.title)
+    - Show me a similar movie to [Joker](movie.sort.title)
+    - Show me a similar movie to [Modern Times](movie.sort.title)
+    - Show me a similar movie to [Pride and Prejudice](movie.sort.title)
+    - Show me a similar movie to [South Park](movie.sort.title)
+    - Show me a similar movie to [Terminator 2: Judgment Day](movie.sort.title)
+    - Show me a similar movie to [The Dark Knight](movie.sort.title)
+    - Show me a similar movie to [Whiplash](movie.sort.title)
+    - Show me a movie similar to [Back to the Future](movie.sort.title)
+    - Show me a movie similar to [Black Widow](movie.sort.title)
+    - Show me a movie similar to [Coco](movie.sort.title)
+    - Show me a movie similar to [Deadpool](movie.sort.title)
+    - Show me a movie similar to [Dune](movie.sort.title)
+    - Show me a movie similar to [Halloween Kills](movie.sort.title)
+    - Show me a movie similar to [Halloween](movie.sort.title)
+    - Show me a movie similar to [Harakiri](movie.sort.title)
+    - Show me a movie similar to [Iron Man](movie.sort.title)
+    - Show me a movie similar to [South Park](movie.sort.title)
+    - Show me something similar to [Dangal](movie.sort.title)
+    - Show me something similar to [Django Unchained](movie.sort.title)
+    - Show me something similar to [Dune](movie.sort.title)
+    - Show me something similar to [Green Street](movie.sort.title)
+    - Show me something similar to [Mallrats](movie.sort.title)
+    - Show me something similar to [Mean Girls](movie.sort.title)
+    - Show me something similar to [Raatchasan](movie.sort.title)
+    - Show me something similar to [Saving Private Ryan](movie.sort.title)
+    - Show me something similar to [The Addams Family](movie.sort.title)
+    - Show me something similar to [The Shawshank Redemption](movie.sort.title)
+    - I want to watch a movie similar to [3 Idiots](movie.sort.title)
+    - I want to watch a movie similar to [City Lights](movie.sort.title)
+    - I want to watch a movie similar to [Gone with the Wind](movie.sort.title)
+    - I want to watch a movie similar to [Green Street](movie.sort.title)
+    - I want to watch a movie similar to [Heat](movie.sort.title)
+    - I want to watch a movie similar to [Inception](movie.sort.title)
+    - I want to watch a movie similar to [Shershaah](movie.sort.title)
+    - I want to watch a movie similar to [The Breakfast Club](movie.sort.title)
+    - I want to watch a movie similar to [The Lord of the Rings: The Return of the King](movie.sort.title)
+    - I want to watch a movie similar to [Thor](movie.sort.title)
+
+- intent: movie:question::feeling_list
+  examples: |
+    - What movies can I watch if I'm feeling [happy](movie.sort.feeling)
+    - What movies can I watch if I'm feeling [mad](movie.sort.feeling)
+    - What movies can I watch if I'm feeling [sad](movie.sort.feeling)
+    - What can I watch if I'm [happy](movie.sort.feeling)
+    - What can I watch if I'm [mad](movie.sort.feeling)
+    - What can I watch if I'm [sad](movie.sort.feeling)
+    - What can I watch to feel better
+    - Know movie based on my feeling
+    - Know movie based on my mood
+    - Recommend me something to watch based on how I feel
+    - What can I watch when I'm [happy](movie.sort.feeling)
+    - What can I watch when I'm [mad](movie.sort.feeling)
+    - What can I watch when I'm [sad](movie.sort.feeling)
 
 - intent: movie:answer
   examples: |
-    - [rescue](movie.sort.keyword)
-    - [hero](movie.sort.keyword)
-    - [art](movie.sort.keyword)
-    - [artist](movie.sort.keyword)
-    - [car](movie.sort.keyword)
-    - [bollywood](movie.sort.keyword)
-    - [friendship](movie.sort.keyword)
-    - [love](movie.sort.keyword)
-    - [based on novel](movie.sort.keyword)
-    - [based on short story](movie.sort.keyword)
-    - [anime](movie.sort.keyword)
-    - [superhero](movie.sort.keyword)
-    - [murder](movie.sort.keyword)
-    - [kung fu](movie.sort.keyword)
     - [single](movie.sort.string)
     - [double word](movie.sort.string)
     - [three in one](movie.sort.string)
@@ -154,39 +220,71 @@ nlu:
     - [noone counts toes like an eight toed guy](movie.sort.string)
     - [it matters to make sense for nine of us](movie.sort.string)
     - [would you bring ten or none to a desert island](movie.sort.string)
-    - [black widow](movie.sort.title)
-    - [free guy](movie.sort.title)
-    - [the lord of the rings](movie.sort.title)
-    - [despicable me](movie.sort.title)
-    - [venom](movie.sort.title)
-    - yes [rescue](movie.sort.keyword)
-    - yes [anime](movie.sort.keyword)
-    - yes [bring them through to the jolly seven](movie.sort.string)
-    - no [hero](movie.sort.keyword)
-    - no [superhero](movie.sort.keyword)
-    - no [noone counts toes like an eight toed guy](movie.sort.string)
+    - [happy](movie.sort.feeling)
+    - [sad](movie.sort.feeling)
+    - [mad](movie.sort.feeling)
+    - [plot](movie.sort.type)
+    - [genre](movie.sort.type)
+    - [full cast](movie.sort.type)
+    - [rating](movie.sort.type)
+    - [french new wave](movie.sort.keyword)
+    - [multiple time frames](movie.sort.keyword)
+    - [hero](movie.sort.keyword)
+    - [father son relationship](movie.sort.keyword)
+    - [mother daughter relationship](movie.sort.keyword)
+    - [epic](movie.sort.keyword)
+    - [director cameo](movie.sort.keyword)
+    - [based on comic book](movie.sort.keyword)
+    - [multiple storyline](movie.sort.keyword)
+    - [tech-noir](movie.sort.keyword)
+    - [Demon Slayer the Movie: Mugen Train](movie.sort.title)
+    - [Interstellar](movie.sort.title)
+    - [Schindler's List](movie.sort.title)
+    - [Iron Man 2](movie.sort.title)
+    - [Princess Mononoke](movie.sort.title)
+    - [Iron Man 3](movie.sort.title)
+    - [Like Stars on Earth](movie.sort.title)
+    - [The Godfather](movie.sort.title)
+    - [Garden State](movie.sort.title)
+    - [The Incredible Hulk](movie.sort.title)
+    - yes [single](movie.sort.string)
+    - yes [happy](movie.sort.feeling)
+    - yes [father son relationship](movie.sort.keyword)
+    - yes [Iron Man 2](movie.sort.title)
+    - no [double word](movie.sort.string)
+    - no [sad](movie.sort.feeling)
+    - no [mother daughter relationship](movie.sort.keyword)
+    - no [Princess Mononoke](movie.sort.title)
 
 - intent: movie:answer_negation
   examples: |
+    - not [happy](movie.sort.feeling)
+    - not [sad](movie.sort.feeling)
+    - not [mad](movie.sort.feeling)
+    - not [plot](movie.sort.type)
+    - not [genre](movie.sort.type)
+    - not [full cast](movie.sort.type)
+    - not [rating](movie.sort.type)
+    - not [farce](movie.sort.keyword)
+    - not [experimental](movie.sort.keyword)
+    - not [dystopia](movie.sort.keyword)
+    - not [robbery](movie.sort.keyword)
     - not [rescue](movie.sort.keyword)
+    - not [famous opening theme](movie.sort.keyword)
+    - not [conspiracy](movie.sort.keyword)
+    - not [neo noir](movie.sort.keyword)
+    - not [slasher](movie.sort.keyword)
     - not [hero](movie.sort.keyword)
-    - not [art](movie.sort.keyword)
-    - not [artist](movie.sort.keyword)
-    - not [car](movie.sort.keyword)
-    - not [bollywood](movie.sort.keyword)
-    - not [friendship](movie.sort.keyword)
-    - not [love](movie.sort.keyword)
-    - not [based on novel](movie.sort.keyword)
-    - not [based on short story](movie.sort.keyword)
-    - not [anime](movie.sort.keyword)
-    - not [superhero](movie.sort.keyword)
-    - not [murder](movie.sort.keyword)
-    - not [kung fu](movie.sort.keyword)
-    - not [black widow](movie.sort.title)
-    - not [free guy](movie.sort.title)
-    - not [the lord of the rings](movie.sort.title)
-    - not [despicable me](movie.sort.title)
-    - not [venom](movie.sort.title)
+    - not [Up](movie.sort.title)
+    - not [Princess Mononoke](movie.sort.title)
+    - not [The Intouchables](movie.sort.title)
+    - not [Dune](movie.sort.title)
+    - not [A Separation](movie.sort.title)
+    - not [Venom](movie.sort.title)
+    - not [Back to the Future](movie.sort.title)
+    - not [Man on Fire](movie.sort.title)
+    - not [The Godfather](movie.sort.title)
+    - not [Garden State](movie.sort.title)
 
 - intent: NEGATIVE
   examples: |
@@ -426,6 +524,18 @@ nlu:
     - good morning
     - hey
 
+- synonym: movie:feeling_happy
+  examples: |
+    - happy
+
+- synonym: movie:feeling_sad
+  examples: |
+    - sad
+
+- synonym: movie:feeling_mad
+  examples: |
+    - mad
+
 - synonym: movie:keyword_rescue
   examples: |
     - rescue
@@ -502,4 +612,324 @@ nlu:
   examples: |
     - venom
 
+- synonym: movie:info_plot
+  examples: |
+    - plot
+
+- synonym: movie:info_genre
+  examples: |
+    - genre
+
+- synonym: movie:info_fullcast
+  examples: |
+    - full cast
+
+- synonym: movie:info_rating
+  examples: |
+    - rating
+
+
+- lookup: movie.sort.keyword
+  examples: |
+    - action hero
+    - alternate history
+    - ambiguous ending
+    - americana
+    - anime
+    - anti hero
+    - avant-garde
+    - b movie
+    - bank heist
+    - based on book
+    - based on play
+    - based on comic
+    - based on comic book
+    - based on novel
+    - based on novella
+    - based on short story
+    - battle
+    - betrayal
+    - biker
+    - black comedy
+    - blockbuster
+    - bollywood
+    - breaking the fourth wall
+    - business
+    - caper
+    - car accident
+    - car chase
+    - car crash
+    - character name in title
+    - character's point of view camera shot
+    - chick flick
+    - coming of age
+    - competition
+    - conspiracy
+    - corruption
+    - criminal mastermind
+    - cult
+    - cult film
+    - cyberpunk
+    - dark hero
+    - deus ex machina
+    - dialogue driven
+    - dialogue driven storyline
+    - directed by star
+    - director cameo
+    - double cross
+    - dream sequence
+    - dystopia
+    - ensemble cast
+    - epic
+    - espionage
+    - experimental
+    - experimental film
+    - fairy tale
+    - famous line
+    - famous opening theme
+    - famous score
+    - fantasy sequence
+    - farce
+    - father daughter relationship
+    - father son relationship
+    - femme fatale
+    - fictional biography
+    - flashback
+    - french new wave
+    - futuristic
+    - good versus evil
+    - heist
+    - hero
+    - high school
+    - husband wife relationship
+    - idealism
+    - independent film
+    - investigation	
+    - kidnapping
+    - knight
+    - kung fu
+    - macguffin
+    - medieval times
+    - mockumentary
+    - monster
+    - mother daughter relationship
+    - mother son relationship
+    - multiple actors playing same role
+    - multiple endings
+    - multiple perspectives
+    - multiple storyline
+    - multiple time frames
+    - murder
+    - musical number
+    - neo noir
+    - neorealism
+    - ninja
+    - no background score
+    - no music
+    - no opening credits
+    - no title at beginning
+    - nonlinear timeline
+    - on the run
+    - one against many
+    - one man army
+    - opening action scene
+    - organized crime
+    - parenthood
+    - parody
+    - plot twist
+    - police corruption
+    - police detective
+    - post-apocalypse
+    - postmodern
+    - psychopath
+    - race against time
+    - redemption
+    - remake
+    - rescue
+    - road movie
+    - robbery
+    - robot
+    - rotoscoping
+    - satire
+    - self sacrifice
+    - serial killer
+    - shakespeare
+    - shootout
+    - show within a show
+    - slasher
+    - southern gothic
+    - spaghetti western
+    - spirituality
+    - spoof
+    - steampunk
+    - subjective camera
+    - superhero
+    - supernatural
+    - surprise ending
+    - swashbuckler
+    - sword and sandal
+    - tech-noir
+    - time travel
+    - title spoken by character
+    - told in flashback
+    - vampire
+    - virtual reality
+    - voice over narration
+    - whistleblower
+    - wilhelm scream
+    - wuxia
+    - zombie
+
+- lookup: movie.sort.title
+  examples: |
+    - 8 Mile
+    - Awake
+    - Dangerous Minds
+    - Ghost
+    - Gone Baby Gone
+    - Green Street
+    - Inception
+    - Leon
+    - Man on Fire
+    - Seven Pounds
+    - Cinderella
+    - Earth Girls Are Easy
+    - School of Rock
+    - 10 Things I Hate About You
+    - Kiki's Delivery Service
+    - Stardust
+    - Enchanted
+    - South Park
+    - Mean Girls
+    - Up
+    - Big Fish
+    - Mallrats
+    - Forrest Gump
+    - It's Kind of a Funny Story
+    - Dead Poets Society
+    - The Breakfast Club
+    - 500 Days of Summer
+    - Mr. Nobody
+    - Garden State
+    - Into the Wild
+    - Black Widow
+    - Free Guy
+    - The Lord of the Rings
+    - Despicable Me
+    - Venom
+    - Pride and Prejudice
+    - The Shawshank Redemption
+    - The Godfather
+    - The Dark Knight
+    - 12 Angry Men
+    - The Lord of the Rings: The Two Towers
+    - Shershaah
+    - The Lord of the Rings: The Return of the King
+    - The Lord of the Rings: The Fellowship of the Ring
+    - Pulp Fiction
+    - Schindler's List
+    - Fight Club
+    - Spirited Away
+    - The Lion King
+    - Grave of the Fireflies
+    - Spider-Man: Into the Spider-Verse
+    - Coco
+    - Princess Mononoke
+    - Toy Story
+    - A Silent Voice
+    - Klaus
+    - My Neighbour Totoro
+    - Inside Out
+    - How to Train Your Dragon
+    - Finding Nemo
+    - Halloween Kills
+    - Halloween
+    - Midnight Mass
+    - Candyman
+    - Alien
+    - Cruella
+    - Hocus Pocus
+    - Life Is Beautiful
+    - The Intouchables
+    - Parasite
+    - The Hot Chick
+    - Seinfeld
+    - Deadpool
+    - Captain America: The First Avenger
+    - Iron Man
+    - The Incredible Hulk
+    - Iron Man 2
+    - Thor
+    - The Avengers
+    - Iron Man 3
+    - Thor: The Dark World
+    - Howard the Duck
+    - Dune
+    - The Last Duel
+    - The Guilty
+    - The Many Saints of Newark
+    - Eternals
+    - Joker
+    - Heat
+    - Home Sweet Home Alone
+    - The Addams Family
+    - The Addams Family 2
+    - The Incredibles
+    - Harry Potter and the Philosopher's Stone
+    - Harry Potter and the Chamber of Secrets
+    - Harry Potter and the Prisoner of Azkaban
+    - Harry Potter and the Goblet of Fire
+    - Harry Potter and the Order of the Phoenix
+    - Harry Potter and the Half-Blood Prince
+    - Harry Potter and the Deathly Hallows
+    - Fantastic Beasts and Where to Find Them
+    - Fantastic Beasts: The Crimes of Grindelwald
+    - Gone with the Wind
+    - The Hunt
+    - Demon Slayer the Movie: Mugen Train
+    - The Father
+    - Inglourious Basterds
+    - A Separation
+    - High and Low
+    - Apocalypse Now
+    - Raiders of the Lost Ark
+    - Princess Mononoke
+    - Oldboy
+    - WALL·E
+    - 3 Idiots
+    - Like Stars on Earth
+    - Django Unchained
+    - Dangal
+    - Ayla
+    - Raatchasan
+    - Hamilton
+    - City Lights
+    - Casablanca
+    - Modern Times
+    - Psycho
+    - Pather Panchali
+    - Rear Window
+    - Terminator 2: Judgment Day
+    - Cinema Paradiso
+    - Back to the Future
+    - Once Upon a Time in the West
+    - It's a Wonderful Life
+    - Whiplash
+    - Untouchable
+    - The Prestige
+    - The Departed
+    - The Pianist
+    - Gladiator
+    - American History X
+    - The Usual Suspects
+    - Seven Samurai
+    - Harakiri
+    - The Silence of the Lambs
+    - Seven
+    - The Green Mile
+    - Saving Private Ryan
+    - Interstellar
+    - The Matrix
+    - Dara of Jasenovac
+    - Soorarai Pottru
 

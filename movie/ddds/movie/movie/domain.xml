@@ -3,16 +3,19 @@
   <goal type="perform" action="top">
     <plan>
       <forget_all/>
-      <findout type="goal"/>
+      <!-- <findout type="goal"/> -->
       <findout type="alt_question">
         <alt>
           <resolve type="wh_question" predicate="movie"/>
         </alt>
         <alt>
-          <resolve type="wh_question" predicate="plot"/>
+          <resolve type="wh_question" predicate="info"/>
         </alt>
         <alt>
           <resolve type="wh_question" predicate="similar_movie"/>
+        </alt>
+        <alt>
+          <resolve type="wh_question" predicate="feeling_list"/>
         </alt>
       </findout>
     </plan>
@@ -25,10 +28,25 @@
     </plan>
   </goal>
 
-  <goal type="resolve" question_type="wh_question" predicate="plot">
+  <goal type="resolve" question_type="wh_question" predicate="info">
     <plan>
       <findout type="wh_question" predicate="title_to_search"/>
-      <invoke_service_query predicate="plot" type="wh_question"/>
+      <findout type="wh_question" predicate="info_type"/>
+      <!-- <findout type="alt_question">
+        <alt>
+          <resolve type="wh_question" predicate="info_plot"/>
+        </alt>
+        <alt>
+          <resolve type="wh_question" predicate="info_genre"/>
+        </alt>
+        <alt>
+          <resolve type="wh_question" predicate="info_rating"/>
+        </alt>
+        <alt>
+          <resolve type="wh_question" predicate="info_fullcast"/>
+        </alt>
+      </findout> -->
+      <invoke_service_query predicate="info" type="wh_question"/>
       <forget predicate="title_to_search"/> 
     </plan>
   </goal>
@@ -38,6 +56,13 @@
       <findout type="wh_question" predicate="title_to_search"/>
       <invoke_service_query predicate="similar_movie" type="wh_question"/>
       <forget predicate="title_to_search"/> 
+    </plan>
+  </goal>
+
+  <goal type="resolve" question_type="wh_question" predicate="feeling_list">
+    <plan>
+      <findout type="wh_question" predicate="feeling_to_search"/>
+      <invoke_service_query predicate="feeling_list" type="wh_question"/>
     </plan>
   </goal>
 

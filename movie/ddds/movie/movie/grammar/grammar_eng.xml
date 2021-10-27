@@ -34,22 +34,44 @@
     </one-of>
   </question>
   
-  <question speaker="user" predicate="plot" type="wh_question">
+  <question speaker="user" predicate="info" type="wh_question">
     <one-of>
-      <item>Tell me the plot of a movie</item>
-      <item>Tell me about <slot predicate="title_to_search"/></item>
       <item>Tell me about a movie</item>
-      <item>Talk more about <slot predicate="title_to_search"/> movie</item>
+      <item>Know more information about a movie</item>
+      <item>Know more info about a movie</item>
+      <item>Know more info about <slot predicate="title_to_search"/></item>
+      <item>Tell me about <slot predicate="title_to_search"/></item>
+      <item>Show me some info about a movie</item>
+      <item>Talk more about <slot predicate="title_to_search"/></item>
+      <item>Know more information about the <slot predicate="info_type"/> of a movie</item>
+      <item>Know <slot predicate="info_type"/> of a movie</item>
+      <item>Know more info about the <slot predicate="info_type"/> of <slot predicate="title_to_search"/></item>
+      <item>What is the <slot predicate="info_type"/> of <slot predicate="title_to_search"/></item>
+      <item>Tell me about the <slot predicate="info_type"/> of <slot predicate="title_to_search"/></item>
     </one-of>
   </question>
 
   <question speaker="user" predicate="similar_movie" type="wh_question">
     <one-of>
       <item>Show me a similar movie</item>
+      <item>Know movie based on a similar movie</item>
+      <item>Show movie based on a similar one</item>
       <item>Show me a similar movie to <slot predicate="title_to_search"/></item>
       <item>Show me a movie similar to <slot predicate="title_to_search"/></item>
       <item>Show me something similar to <slot predicate="title_to_search"/></item>
       <item>I want to watch a movie similar to <slot predicate="title_to_search"/></item>
+    </one-of>
+  </question>
+
+  <question speaker="user" predicate="feeling_list" type="wh_question">
+    <one-of>
+      <item>What movies can I watch if I'm feeling <slot predicate="feeling_to_search"/></item>
+      <item>What can I watch if I'm <slot predicate="feeling_to_search"/></item>
+      <item>What can I watch to feel better</item>
+      <item>Know movie based on my feeling</item>
+      <item>Know movie based on my mood</item>
+      <item>Recommend me something to watch based on how I feel</item>
+      <item>What can I watch when I'm <slot predicate="feeling_to_search"/></item>
     </one-of>
   </question>
 
@@ -62,21 +84,75 @@
     what is the movie title
   </question>
 
+  <question speaker="system" predicate="feeling_to_search" type="wh_question">
+    How do you feel
+  </question>
+
+  <question speaker="system" predicate="info_type" type="wh_question">
+    What do you want to know about it
+  </question>
   
   <answer speaker="system" predicate="movie">The best movie to watch is <slot predicate="movie"/></answer>
-  <answer speaker="system" predicate="plot">The movie talks about <slot predicate="plot"/></answer>
+  <answer speaker="system" predicate="info">Ok, <slot predicate="info"/></answer>
   <answer speaker="system" predicate="similar_movie">A similar movie is <slot predicate="similar_movie"/></answer>
+  <answer speaker="system" predicate="feeling_list">Here is a list of movies you can watch: <slot predicate="feeling_list"/></answer>
 
-  <question type="wh_question" speaker="all" predicate="movie">movie</question>
-  <question type="wh_question" speaker="all" predicate="plot">plot</question>
-  <question type="wh_question" speaker="all" predicate="similar_movie">similar movie</question>
+  <question type="wh_question" speaker="all" predicate="movie">movie based on a keyword</question>
+  <question type="wh_question" speaker="all" predicate="info">more information about a movie</question>
+  <question type="wh_question" speaker="all" predicate="similar_movie">movie given a similar movie</question>
+  <question type="wh_question" speaker="all" predicate="feeling_list">movie based on your mood</question>
 
+  <question type="wh_question" speaker="all" predicate="info_plot">plot</question>
+  <question type="wh_question" speaker="all" predicate="info_genre">genre</question>
+  <question type="wh_question" speaker="all" predicate="info_rating">rating</question>
+  <question type="wh_question" speaker="all" predicate="info_fullcast">cast</question>
+  
+  <!-- feelings -->
+  <!-- <individual name="feeling_happy">
+    <one-of>
+        <item>happy</item>
+        <item>excited</item>
+        <item>glad</item>
+        <item>good</item>
+        <item>joyful</item>
+    </one-of>
+  </individual>
+  <individual name="feeling_sad">
+    <one-of>
+        <item>sad</item>
+        <item>upset</item>
+        <item>frustrated</item>
+        <item>depressed</item>
+        <item>down</item>
+        <item>bad</item>
+    </one-of>
+  </individual>
+  <individual name="feeling_mad">
+    <one-of>
+        <item>mad</item>
+        <item>angry</item>
+        <item>furious</item>
+        <item>annoyed</item>
+    </one-of>
+  </individual> -->
+  <individual name="feeling_happy">happy</individual>
+  <individual name="feeling_sad">sad</individual>
+  <individual name="feeling_mad">mad</individual>
+
+  <!-- info types -->
+  <individual name="info_plot">plot</individual>
+  <individual name="info_genre">genre</individual>
+  <individual name="info_fullcast">full cast</individual>
+  <individual name="info_rating">rating</individual>
+
+  <!-- movies -->
   <individual name="title_blackwidow">black widow</individual>
   <individual name="title_freeguy">free guy</individual>
   <individual name="title_lotr">the lord of the rings</individual>
   <individual name="title_despicableme">despicable me</individual>
   <individual name="title_venom">venom</individual>
 
+  <!-- keywords -->
   <individual name="keyword_rescue">rescue</individual>
   <individual name="keyword_hero">hero</individual>
   <individual name="keyword_art">art</individual>

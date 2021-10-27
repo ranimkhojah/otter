@@ -3,13 +3,27 @@
 
     <sort name="title" dynamic="true"/>
     <sort name="keyword" dynamic="true"/>
+    <sort name="feeling" dynamic="true"/>
+    <sort name="type" dynamic="false"/>
 
     <predicate name="title_to_search" sort="title"/>
     <predicate name="keyword_to_search" sort="keyword"/>
+    <predicate name="feeling_to_search" sort="feeling"/>
+    <predicate name="info_type" sort="type"/>
     
     <predicate name="movie" sort="string"/>
-    <predicate name="plot" sort="string"/>
+    <predicate name="info" sort="string"/>
     <predicate name="similar_movie" sort="string"/>
+    <predicate name="feeling_list" sort="string"/>
+
+    <predicate name="info_plot" sort="type"/>
+    <predicate name="info_genre" sort="type"/>
+    <predicate name="info_fullcast" sort="type"/>
+    <predicate name="info_rating" sort="type"/>
+
+    <individual name="feeling_happy" sort="feeling"/>
+    <individual name="feeling_sad" sort="feeling"/>
+    <individual name="feeling_mad" sort="feeling"/>
 
     <individual name="title_blackwidow" sort="title"/>
     <individual name="title_freeguy" sort="title"/>

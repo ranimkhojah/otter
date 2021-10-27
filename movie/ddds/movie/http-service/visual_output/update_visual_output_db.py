@@ -71,6 +71,7 @@ class VisualOutputDatabase(Database):
 
 def main():
     try:
+        print("running update_visual_output.py")
         expected_input_db = ExpectedInputDatabase(EXPECTED_INPUT_DB_NAME)
         expected_input_db.cleanup_docs()
         expected_input_db.bulk_update_docs()

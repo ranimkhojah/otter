@@ -1,13 +1,13 @@
 [
     {
-        "current_plan_item": "findout(?set([goal(resolve(?X.movie(X))), goal(resolve(?X.info(X))), goal(resolve(?X.similar_movie(X))), goal(resolve(?X.feeling_list(X)))]))",
+        "current_plan_item": "findout(?set([goal(resolve(?X.movie(X))), goal(resolve(?X.plot(X))), goal(resolve(?X.similar_movie(X))), goal(resolve(?X.feeling_list(X)))]))",
         "semantic_expression": "ask(?X.movie(X))",
         "asr_hints": [],
         "visual_information": [
             {
                 "attribute": "name",
                 "type": "text/plain",
-                "value": "Movie based on Keyword"
+                "value": "Recommend movie based on keyword"
             },
             {
                 "attribute": "image",
@@ -17,38 +17,38 @@
         ]
     },
     {
-        "current_plan_item": "findout(?set([goal(resolve(?X.movie(X))), goal(resolve(?X.info(X))), goal(resolve(?X.similar_movie(X))), goal(resolve(?X.feeling_list(X)))]))",
-        "semantic_expression": "ask(?X.info(X))",
+        "current_plan_item": "findout(?set([goal(resolve(?X.movie(X))), goal(resolve(?X.plot(X))), goal(resolve(?X.similar_movie(X))), goal(resolve(?X.feeling_list(X)))]))",
+        "semantic_expression": "ask(?X.plot(X))",
         "asr_hints": [],
         "visual_information": [
             {
                 "attribute": "name",
                 "type": "text/plain",
-                "value": "Movie Information"
+                "value": "Plot of a Movie"
             }
         ]
     },
     {
-        "current_plan_item": "findout(?set([goal(resolve(?X.movie(X))), goal(resolve(?X.info(X))), goal(resolve(?X.similar_movie(X))), goal(resolve(?X.feeling_list(X)))]))",
+        "current_plan_item": "findout(?set([goal(resolve(?X.movie(X))), goal(resolve(?X.plot(X))), goal(resolve(?X.similar_movie(X))), goal(resolve(?X.feeling_list(X)))]))",
         "semantic_expression": "ask(?X.similar_movie(X))",
         "asr_hints": [],
         "visual_information": [
             {
                 "attribute": "name",
                 "type": "text/plain",
-                "value": "Movie based on Similar Movie"
+                "value": "Recommend movie based on similar movie"
             }
         ]
     },
     {
-        "current_plan_item": "findout(?set([goal(resolve(?X.movie(X))), goal(resolve(?X.info(X))), goal(resolve(?X.similar_movie(X))), goal(resolve(?X.feeling_list(X)))]))",
+        "current_plan_item": "findout(?set([goal(resolve(?X.movie(X))), goal(resolve(?X.plot(X))), goal(resolve(?X.similar_movie(X))), goal(resolve(?X.feeling_list(X)))]))",
         "semantic_expression": "ask(?X.feeling_list(X))",
         "asr_hints": [],
         "visual_information": [
             {
                 "attribute": "name",
                 "type": "text/plain",
-                "value": "Movie based on Mood"
+                "value": "Recommend movie based on your mood"
             }
         ]
     }

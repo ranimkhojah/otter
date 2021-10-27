@@ -1,36 +1,48 @@
 --- main menu
-S> What would you like to do?
+S> Do you want to know movie based on a keyword, know more information about a movie, know movie given a similar movie or know movie based on your mood?
 U> Watch a movie
 S> What kind of movie?
 U> art
 S> The best movie to watch is *
 --- movie (one-shot)
-S> What would you like to do?
+S> Do you want to know movie based on a keyword, know more information about a movie, know movie given a similar movie or know movie based on your mood?
 U> Watch a rescue movie
 S> The best movie to watch is *
 --- movie (step-by-step)
-S> What would you like to do?
+S> Do you want to know movie based on a keyword, know more information about a movie, know movie given a similar movie or know movie based on your mood?
 U> Recommend me a movie to watch
 S> What kind of movie?
 U> hero
 S> The best movie to watch is *
---- plot (one-shot)
-S> What would you like to do?
-U> Tell me about despicable me
-S> The movie talks about *
---- plot (step-by-step)
-S> What would you like to do?
-U> Tell me the plot of a movie
+--- info (one-shot)
+S> Do you want to know movie based on a keyword, know more information about a movie, know movie given a similar movie or know movie based on your mood?
+U> Tell me about the plot of despicable me
+S> Ok,*
+--- info (step-by-step)
+S> Do you want to know movie based on a keyword, know more information about a movie, know movie given a similar movie or know movie based on your mood?
+U> Tell me about a movie
 S> What is the movie title?
 U> Despicable Me
-S> The movie talks about *
+S> What do you want to know about it?
+U> rating
+S> Ok,*
 --- similar (one-shot)
-S> What would you like to do?
+S> Do you want to know movie based on a keyword, know more information about a movie, know movie given a similar movie or know movie based on your mood?
 U> Show me a similar movie to Black Widow
 S> A similar movie is *
 --- similar (step-by-step)
-S> What would you like to do?
+S> Do you want to know movie based on a keyword, know more information about a movie, know movie given a similar movie or know movie based on your mood?
 U> Show me a similar movie
 S> What is the movie title?
 U> Despicable Me
 S> A similar movie is *
+--- feeling (one-shot)
+S> Do you want to know movie based on a keyword, know more information about a movie, know movie given a similar movie or know movie based on your mood?
+U> What can I watch if I'm mad
+S> Here is a list of movies you can watch:*
+--- feeling (step-by-step)
+S> Do you want to know movie based on a keyword, know more information about a movie, know movie given a similar movie or know movie based on your mood?
+U> What can I watch to feel better
+S> How do you feel?
+U> sad
+S> Here is a list of movies you can watch:*

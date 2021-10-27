@@ -10,12 +10,13 @@
         </target>
     </query>
 
-    <query name="plot">
+    <query name="info">
         <parameters>
             <parameter predicate="title_to_search" format="grammar_entry"/>
+            <parameter predicate="info_type" format="grammar_entry"/>
         </parameters>
         <target>
-            <http endpoint="http://http-service/plot"/>
+            <http endpoint="http://http-service/info"/>
         </target>
     </query>
 
@@ -25,6 +26,15 @@
         </parameters>
         <target>
             <http endpoint="http://http-service/similar_movie"/>
+        </target>
+    </query>
+
+    <query name="feeling_list">
+        <parameters>
+            <parameter predicate="feeling_to_search" format="grammar_entry"/>
+        </parameters>
+        <target>
+            <http endpoint="http://http-service/mlist_given_feeling"/>
         </target>
     </query>
 
