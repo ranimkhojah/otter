@@ -16,10 +16,10 @@
     <predicate name="similar_movie" sort="string"/>
     <predicate name="feeling_list" sort="string"/>
 
-    <predicate name="info_plot" sort="type"/>
-    <predicate name="info_genre" sort="type"/>
-    <predicate name="info_fullcast" sort="type"/>
-    <predicate name="info_rating" sort="type"/>
+    <individual name="info_plot" sort="type"/>
+    <individual name="info_genre" sort="type"/>
+    <individual name="info_fullcast" sort="type"/>
+    <individual name="info_rating" sort="type"/>
 
     <individual name="feeling_happy" sort="feeling"/>
     <individual name="feeling_sad" sort="feeling"/>

@@ -77,7 +77,7 @@
 
 
   <question speaker="system" predicate="keyword_to_search" type="wh_question">
-    what kind of movie
+    What does the movie talk about
   </question>
 
   <question speaker="system" predicate="title_to_search" type="wh_question">
@@ -102,13 +102,13 @@
   <question type="wh_question" speaker="all" predicate="similar_movie">movie given a similar movie</question>
   <question type="wh_question" speaker="all" predicate="feeling_list">movie based on your mood</question>
 
-  <question type="wh_question" speaker="all" predicate="info_plot">plot</question>
+  <!-- <question type="wh_question" speaker="all" predicate="info_plot">plot</question>
   <question type="wh_question" speaker="all" predicate="info_genre">genre</question>
   <question type="wh_question" speaker="all" predicate="info_rating">rating</question>
-  <question type="wh_question" speaker="all" predicate="info_fullcast">cast</question>
+  <question type="wh_question" speaker="all" predicate="info_fullcast">cast</question> -->
   
   <!-- feelings -->
-  <!-- <individual name="feeling_happy">
+  <individual name="feeling_happy">
     <one-of>
         <item>happy</item>
         <item>excited</item>
@@ -134,10 +134,10 @@
         <item>furious</item>
         <item>annoyed</item>
     </one-of>
-  </individual> -->
-  <individual name="feeling_happy">happy</individual>
+  </individual>
+  <!-- <individual name="feeling_happy">happy</individual>
   <individual name="feeling_sad">sad</individual>
-  <individual name="feeling_mad">mad</individual>
+  <individual name="feeling_mad">mad</individual> -->
 
   <!-- info types -->
   <individual name="info_plot">plot</individual>

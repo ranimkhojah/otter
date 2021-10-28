@@ -32,22 +32,8 @@
     <plan>
       <findout type="wh_question" predicate="title_to_search"/>
       <findout type="wh_question" predicate="info_type"/>
-      <!-- <findout type="alt_question">
-        <alt>
-          <resolve type="wh_question" predicate="info_plot"/>
-        </alt>
-        <alt>
-          <resolve type="wh_question" predicate="info_genre"/>
-        </alt>
-        <alt>
-          <resolve type="wh_question" predicate="info_rating"/>
-        </alt>
-        <alt>
-          <resolve type="wh_question" predicate="info_fullcast"/>
-        </alt>
-      </findout> -->
       <invoke_service_query predicate="info" type="wh_question"/>
-      <forget predicate="title_to_search"/> 
+      <forget predicate="info_type"/> 
     </plan>
   </goal>
 
