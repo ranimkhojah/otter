@@ -11,6 +11,8 @@ import { dmMachine } from "./dmColourChanger";
 import createSpeechRecognitionPonyfill from 'web-speech-cognitive-services/lib/SpeechServices/SpeechToText'
 import createSpeechSynthesisPonyfill from 'web-speech-cognitive-services/lib/SpeechServices/TextToSpeech';
 
+let answer = ""
+
 let dm = dmMachine
 if (process.env.REACT_APP_BACKEND === 'TDM') {
     dm = tdmDmMachine
@@ -176,6 +178,7 @@ const machine = Machine<SDSContext, any, SDSEvent>({
             recLogResult: (context: SDSContext) => {
                 /* context.recResult = event.recResult; */
                 console.log('<< ASR: ' + context.recResult[0]["utterance"]);
+                answer = context.recResult[0]["utterance"]
             },
             test: () => {
                 console.log('test')
@@ -256,7 +259,24 @@ const FigureButton = (props: Props): JSX.Element => {
         </figure>
     )
 }
+interface TextProps {
+    text: any
+}
 
+const TextDisplay = (props: TextProps): JSX.Element => {
+
+    let state = {
+        text: props.text
+    }
+
+    return (
+        <div>
+            {props.text}
+        </div>
+    )
+
+
+}
 function App() {
     const [current, send] = useMachine(machine, {
         devTools: true,
@@ -270,6 +290,7 @@ function App() {
                 context.asr.abort()
             }),
             ttsStart: asEffect((context) => {
+                answer = context.ttsAgenda
                 console.log(context)
                 const utterance = new context.ttsUtterance(context.ttsAgenda);
                 utterance.voice = context.voice
@@ -321,17 +342,23 @@ function App() {
                     onClick={() => send({ type: 'SELECT', value: o.semantic_expression })} />
             )
         )
-
+    
     switch (true) {
         default:
             return (
+
                 <div className="App">
-                    <ReactiveButton state={current} alternative={{}} onClick={() => send('CLICK')} />
-                    <div className="select-wrapper">
-                        <div className="select">
-                            {figureButtons}
+                    <div>
+                        <ReactiveButton state={current} alternative={{}} onClick={() => send('CLICK')}/>
+                        <div className="select-wrapper">
+                            <div className="select">
+                                {figureButtons}
+                            </div>
                         </div>
                     </div>
+                    <div className="answer">
+                        <TextDisplay text={answer}></TextDisplay></div>
+
                 </div>
             )
     }
